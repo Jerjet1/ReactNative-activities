@@ -1,0 +1,50 @@
+https://www.nativewind.dev/getting-started/installation
+
+step 1:
+npx expo install nativewind tailwindcss@^3.4.17 react-native-reanimated@3.16.2 react-native-safe-area-context
+step 2:
+npx tailwindcss init
+copy the ff. code
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // NOTE: Update this to include the paths to all of your component files.
+  content: ["./app/**/*.{js,jsx,ts,tsx}"], // can add another path for components ("./components/**/*.{js,jsx,ts,tsx}")
+  presets: [require("nativewind/preset")],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+step 3:
+create a global.css
+paste the ff. code
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+step 4:
+create a file babel.config.js and paste the ff.
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: [
+      ["babel-preset-expo", { jsxImportSource: "nativewind" }],
+      "nativewind/babel",
+    ],
+  };
+};
+
+step 5:
+run the command 'npx expo customize metro.config.js' to generate metro config file and paste the ff.
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require('nativewind/metro');
+
+const config = getDefaultConfig(__dirname)
+
+module.exports = withNativeWind(config, { input: './global.css' })
+
+step 6:
+run the command npx expo run
+then import the ../global.css file para magamit ang tailwindcss
