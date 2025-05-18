@@ -1,6 +1,0 @@
-1. npx create-expo-app@latest
-2. type y
-3. name of the app
-4. go to the directory of the app
-5.type npx expo start
-6. type npm run reset-project kung start from scratch
