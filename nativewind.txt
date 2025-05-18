@@ -46,5 +46,8 @@ const config = getDefaultConfig(__dirname)
 module.exports = withNativeWind(config, { input: './global.css' })
 
 step 6:
-run the command npx expo run
+run the command npx expo start
 then import the ../global.css file para magamit ang tailwindcss
+
+skip installation
+npx rn-new@latest my-expo-app --nativewind
