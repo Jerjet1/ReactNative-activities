@@ -1,4 +1,4 @@
-import { Text, View, Alert, Pressable } from "react-native";
+import { Text, View, Alert, Pressable, Image } from "react-native";
 import { useRouter } from "expo-router";
 import "../../global.css";
 import { Link } from "expo-router";
@@ -11,7 +11,11 @@ export default function Index() {
     ]);
   };
   return (
-    <View className="flex-1 w-full bg-blue-400">
+    <View className="flex-1 w-full">
+      <Image
+        source={require("@/assets/images/dragonball.jpg")}
+        className="absolute w-[100%] h-[100%]"
+      />
       <View className="flex items-center justify-start p-20">
         <Text className="text-4xl font-bold">Classmates</Text>
       </View>

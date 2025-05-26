@@ -8,10 +8,11 @@ export default function TabLayout() {
     <Stack
       screenOptions={{
         headerTitleAlign: "center",
-        headerStyle: { backgroundColor: "#8EB1D9" },
+        headerStyle: {
+          backgroundColor: "#FF8910",
+        },
         headerTitleStyle: { fontSize: 30, fontWeight: "bold" },
-      }}
-    >
+      }}>
       <Stack.Screen name="index" options={{ title: "HomePage" }} />
       <Stack.Screen name="Page-1" options={{ title: "Profile Page" }} />
       <Stack.Screen name="Page-3" options={{ title: "Profile Page" }} />

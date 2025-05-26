@@ -3,7 +3,11 @@ import React from "react";
 
 export default function Page2() {
   return (
-    <View className="bg-blue-400 flex-1 w-full">
+    <View className="flex-1 w-full">
+      <Image
+        source={require("@/assets/images/dragonball.jpg")}
+        className="absolute w-[100%] h-[100%]"
+      />
       <View className="flex items-center h-full">
         <View className="w-48 h-48 bg-white/50 flex items-center justify-center mt-10 rounded-full">
           <Image
