@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 const app = express();
-const PORT = 3000;
+const PORT = 8000;
 const db = new sqlite3.Database("student.db");
 
 app.use(cors());
@@ -61,5 +61,5 @@ app.delete("/students/:id", (req: Request, res: Response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://192.168.1.36:${PORT}`);
+  console.log(`Server is running on http://192.168.1.12:${PORT}`);
 });

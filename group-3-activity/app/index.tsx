@@ -21,6 +21,7 @@ export default function Index() {
       .get(API_URL)
       .then((response) => {
         setStudents(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("Error fetching students:", error);
@@ -50,8 +51,7 @@ export default function Index() {
                       grade: item.grade,
                     },
                   })
-                }
-              >
+                }>
                 <Text>{item.name}</Text>
               </Pressable>
             )}
