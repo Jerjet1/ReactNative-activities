@@ -45,8 +45,7 @@ export default function Index() {
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       className="flex-1"
-      style={{ backgroundColor: "#f8f8f8" }}
-    >
+      style={{ backgroundColor: "#f8f8f8" }}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View className="flex-1 items-center justify-center bg-gray-400">
           <View className="w-full max-w-sm p-4 bg-gray-50 rounded-lg shadow-md flex justify-center items-center">
