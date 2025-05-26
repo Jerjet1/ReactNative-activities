@@ -1,10 +1,10 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import * as Localization from 'expo-localization';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import * as Localization from "expo-localization";
 
-import en from '../locale/en/translation.json';
-import es from '../locale/es/translation.json';
-import ja from '../locale/ja/translation.json';
+import en from "../locale/en/translation.json";
+import es from "../locale/es/translation.json";
+import ja from "../locale/ja/translation.json";
 
 const resources = {
   en: { translation: en },
@@ -13,11 +13,13 @@ const resources = {
 };
 
 const languageDetector = {
-  type: 'languageDetector',
+  type: "languageDetector",
   async: true,
   detect: (callback) => {
     const locale = Localization.getLocales(); // e.g. 'en', 'es'
-    const supportedLocale = Object.keys(resources).includes(locale) ? locale : 'en';
+    const supportedLocale = Object.keys(resources).includes(locale)
+      ? locale
+      : "en";
     callback(supportedLocale);
   },
   init: () => {},
@@ -29,8 +31,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    compatibilityJSON: 'v3',
-    fallbackLng: 'en',
+    compatibilityJSON: "v3",
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false,
     },
