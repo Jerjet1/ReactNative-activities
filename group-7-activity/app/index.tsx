@@ -1,12 +1,17 @@
-import { Text, View, Pressable, FlatList, TouchableOpacity } from "react-native";
-import React, {useState, useMemo, useCallback} from "react"
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Icon from '@expo/vector-icons/FontAwesome5'
-import '@/global.css'
-import Post from '@/Components/Post'
-import mockdata from '@/Data/mockdata'
+import {
+  Text,
+  View,
+  Pressable,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
+import React, { useState, useMemo, useCallback } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Icon from "@expo/vector-icons/FontAwesome5";
+import "@/global.css";
+import Post from "@/Components/Post";
+import mockdata from "@/Data/mockdata";
 export default function Index() {
-
   return (
     <View className="flex-1 bg-white">
       <View className="flex flex-row bg-white border-gray-900 shadow-md justify-between px-4 py-4">
@@ -14,7 +19,7 @@ export default function Index() {
         <View className="flex flex-row gap-6">
           <TouchableOpacity>
             <View className="w-[35px] h-[35px] bg-gray-400 items-center justify-center rounded-full">
-              <Icon name="plus" size={20} color="black"/>
+              <Icon name="plus" size={20} color="black" />
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
@@ -33,14 +38,10 @@ export default function Index() {
         <SafeAreaView className="m-2">
           <FlatList
             data={mockdata}
-            keyExtractor={item => item.id}
-            renderItem={({item})=> <Post post={item}/>}>
-          </FlatList>
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => <Post post={item} />}></FlatList>
         </SafeAreaView>
       </View>
     </View>
   );
 }
-
-
-

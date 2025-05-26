@@ -1,20 +1,20 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
-import Icon from '@expo/vector-icons/FontAwesome5'
-import React from 'react'
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import Icon from "@expo/vector-icons/FontAwesome5";
+import React from "react";
 
-export default function Post({post}: any) {
+export default function Post({ post }: any) {
   return (
     <View className="bg-white py-5 rounded-md shadow-md ">
       {/* Header */}
       <View className="flex flex-row items-start mb-3 border-gray-600">
-            <Image
-                source={post.user.avatar }
-                className="w-[35px] h-[35px] rounded-full mr-2"
-            />
-            <View>
-                <Text className="font-semibold text-gray-800">{post.user.name}</Text>
-                <Text className="text-xs text-gray-500">{post.time}</Text>
-            </View>
+        <Image
+          source={post.user.avatar}
+          className="w-[35px] h-[35px] rounded-full mr-2"
+        />
+        <View>
+          <Text className="font-semibold text-gray-800">{post.user.name}</Text>
+          <Text className="text-xs text-gray-500">{post.time}</Text>
+        </View>
       </View>
 
       {/* Content */}
@@ -22,12 +22,12 @@ export default function Post({post}: any) {
 
       {/* Post Image */}
       {post.imagePost && (
-        <View className='flex justify-center items-center'>
-            <Image
-            source={post.imagePost }
+        <View className="flex justify-center items-center">
+          <Image
+            source={post.imagePost}
             className="w-full h-60 rounded-md mb-2"
             resizeMode="cover"
-            />
+          />
         </View>
       )}
 
